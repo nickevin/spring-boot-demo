@@ -1,0 +1,10 @@
+include::api/overview.adoc[]
+
+include::api/paths.adoc[]
+include::api/definitions.adoc[]
+
+= spring actuator REST API
+***
+
+include::actuator/paths.adoc[]
+include::actuator/definitions.adoc[]

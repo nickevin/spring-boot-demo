@@ -35,10 +35,6 @@
 	<logger name="org.hibernate.type" level="ALL" />
 	<logger name="org.hibernate" level="DEBUG" />
 
-	<logger name="pedestal" level="ALL" />
-	<logger name="hammock-cafe" level="ALL" />
-	<logger name="user" level="ALL" />
-
 	<root level="INFO">
 		<appender-ref ref="FILE" />
 		<appender-ref ref="STDOUT" />
