@@ -30,11 +30,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Application extends SpringBootServletInitializer {
 
   @Override
-  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+  protected SpringApplicationBuilder configure(final SpringApplicationBuilder application) {
     return application.sources(Application.class);
   }
 
-  public static void main(String[] args) throws Exception {
+  public static void main(final String[] args) throws Exception {
     SpringApplication.run(Application.class, args);
   }
 

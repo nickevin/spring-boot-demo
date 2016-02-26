@@ -14,6 +14,10 @@
 * mvn install
 * put war into webapps directory
 
+#### Generate REST API
+* mvn install 
+* cd target/generated-docs/index.html
+
 #### Reference
 * http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
 * https://spring.io/guides/gs/spring-boot/
