@@ -1,9 +1,15 @@
 #### Generate
 * https://start.spring.io/
 
-#### Development 
-* mvn eclipse:eclipse
-* import to eclipse
+#### Development
+* Java
+	* mvn eclipse:eclipse
+	* import to eclipse
+* Front-end
+	* install install: bower install
+	* install grunt: npm install grunt --save-dev
+	* install grunt plugins: npm install plugin-name --save-dev
+	* run grunt: grunt
 
 #### Run 
 * mvn spring-boot:run

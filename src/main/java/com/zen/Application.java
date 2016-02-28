@@ -56,7 +56,7 @@ public class Application extends SpringBootServletInitializer {
 
   @SuppressWarnings("unchecked")
   private Predicate<String> apiPaths() {
-    return or(regex("/member/.*"), regex("/hi"), regex("/welcome"), regex("/admin/.*"));
+    return or(regex("/member/.*"), regex("/user/?.*"), regex("/admin/?.*"));
   }
 
   private ApiInfo apiInfo() {

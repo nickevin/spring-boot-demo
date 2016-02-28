@@ -8,6 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -20,10 +24,12 @@ import lombok.EqualsAndHashCode;
  * @version 1.0
  * @see
  */
+@Data
 @Entity
 @Table(name = "t_member")
-@Data
 @EqualsAndHashCode
+@XmlRootElement(name = "Member")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Member implements Serializable {
 
   @Id
@@ -32,6 +38,7 @@ public class Member implements Serializable {
   @NotNull
   private String memberName = "";
   @NotNull
+  @XmlTransient
   private String password;
   @NotNull
   private String mobile = "";

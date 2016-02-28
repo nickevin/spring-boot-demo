@@ -30,7 +30,7 @@ public class CacheConfig extends CachingConfigurerSupport {
   public KeyGenerator keyGenerator() {
     return new KeyGenerator() {
       @Override
-      public Object generate(Object o, Method method, Object... objects) {
+      public Object generate(final Object o, final Method method, final Object... objects) {
         StringBuilder sb = new StringBuilder();
         sb.append(o.getClass().getName());
         sb.append(method.getName());
@@ -49,14 +49,14 @@ public class CacheConfig extends CachingConfigurerSupport {
   }
 
   @Bean
-  public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory cf) {
+  public RedisTemplate<String, String> redisTemplate(final RedisConnectionFactory cf) {
     RedisTemplate<String, String> redisTemplate = new RedisTemplate<String, String>();
     redisTemplate.setConnectionFactory(cf);
     return redisTemplate;
   }
 
   @Bean
-  public CacheManager cacheManager(RedisTemplate redisTemplate) {
+  public CacheManager cacheManager(final RedisTemplate redisTemplate) {
     RedisCacheManager cacheManager = new RedisCacheManager(redisTemplate);
 
     // Number of seconds before expiration. Defaults to unlimited (0)

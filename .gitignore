@@ -3,6 +3,12 @@
 .project
 .settings/
 /bin/
+node_modules/
+bower_components/
+
+# Static files
+bootstrap/
+jquery/
 
 # Intellij project files
 *.iml
