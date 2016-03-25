@@ -10,8 +10,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.GenericToStringSerializer;
+import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
  * Class description goes here.
@@ -43,15 +45,12 @@ public class CacheConfig extends CachingConfigurerSupport {
   }
 
   @Bean
-  public JedisConnectionFactory redisConnectionFactory() {
-    JedisConnectionFactory redisConnectionFactory = new JedisConnectionFactory();
-    return redisConnectionFactory;
-  }
+  public RedisTemplate<String, Object> redisTemplate(final RedisConnectionFactory connectionFactory) {
+    RedisTemplate<String, Object> redisTemplate = new RedisTemplate<String, Object>();
+    redisTemplate.setConnectionFactory(connectionFactory);
+    redisTemplate.setKeySerializer(new StringRedisSerializer());
+    redisTemplate.setHashKeySerializer(new StringRedisSerializer());
 
-  @Bean
-  public RedisTemplate<String, String> redisTemplate(final RedisConnectionFactory cf) {
-    RedisTemplate<String, String> redisTemplate = new RedisTemplate<String, String>();
-    redisTemplate.setConnectionFactory(cf);
     return redisTemplate;
   }
 

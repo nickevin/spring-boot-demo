@@ -6,10 +6,11 @@
 	* mvn eclipse:eclipse
 	* import to eclipse
 * Front-end
-	* install install: bower install
+	* install bower: bower install or bower install bootstrap-fileinput --save
 	* install grunt: npm install grunt --save-dev
 	* install grunt plugins: npm install plugin-name --save-dev
 	* run grunt: grunt
+	* bower cache clean
 
 #### Run 
 * mvn spring-boot:run

@@ -9,6 +9,7 @@ bower_components/
 # Static files
 bootstrap/
 jquery/
+asciidoc/
 
 # Intellij project files
 *.iml

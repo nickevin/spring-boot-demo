@@ -15,7 +15,7 @@
 <link href="../resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="../resources/style/signin.css" rel="stylesheet">
+<link href="../resources/style/style.css" rel="stylesheet">
 <body>
   <div class="container">
     <form class="form-signin">
