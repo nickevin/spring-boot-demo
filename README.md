@@ -24,6 +24,7 @@
 #### Generate REST API
 * mvn install 
 * cd target/generated-docs/index.html
+* [Swagger UI](http://localhost:8080/swagger-ui.html)
 
 #### Reference
 * http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/

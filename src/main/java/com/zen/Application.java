@@ -7,7 +7,7 @@ import static springfox.documentation.builders.PathSelectors.regex;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -15,6 +15,7 @@ import com.google.common.base.Predicate;
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -23,6 +24,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * @author Kevin
  * @see http://eugeneyang.com/2015/12/18/Springmvc4%E9%9B%86%E6%88%90springfox,%20Swagger%20UI,%20springfox-staticdocs/
+ * @see http://localhost:8080/swagger-ui.html
+ * 
  */
 @SpringBootApplication
 @EnableSwagger2
@@ -61,8 +64,8 @@ public class Application extends SpringBootServletInitializer {
 
   private ApiInfo apiInfo() {
     return new ApiInfoBuilder().title("spring-boot-demo REST API")
-        .description("spring-boot-demo REST API Descriptions.").contact("nickevin@gmail.com").version("0.0.1-SNAPSHOT")
-        .license("Apache License Version 2.0")
+        .description("spring-boot-demo REST API Descriptions.").contact(new Contact("", "", "nickevin@gmail.com"))
+        .version("0.0.1-SNAPSHOT").license("Apache License Version 2.0")
         .licenseUrl("https://github.com/nickevin/spring-boot-demo/blob/master/LICENSE").build();
   }
 
