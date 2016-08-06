@@ -8,7 +8,13 @@
 * Front-end
 	* install bower: bower install or bower install bootstrap-fileinput --save
 	* install grunt: npm install grunt --save-dev
-	* install grunt plugins: npm install plugin-name --save-dev
+	* install grunt plugins: 
+		- npm install --save-dev load-grunt-tasks
+		- npm install --save-dev grunt-bower-task
+		- npm install --save-dev grunt-contrib-copy
+		- npm install --save-dev grunt-contrib-cssmin
+		- npm install --save-dev grunt-contrib-jshint
+		- npm install --save-dev grunt-contrib-uglify
 	* run grunt: grunt
 	* bower cache clean
 
